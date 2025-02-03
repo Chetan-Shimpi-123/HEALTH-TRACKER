@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+   
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    color: rgb(36, 156, 186);
+
+     
+}
+
+.form, .filters {
+    margin-bottom: 20px;
+   text-align: center;
+
+}
+
+input, select, button {
+    margin: 5px;
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+canvas {
+    margin-top: 30px;
+    max-width: 100%;
+}
