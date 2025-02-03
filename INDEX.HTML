@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Challenge Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Health Challenge Tracker</h1>
+
+        <!-- Workout Form -->
+        <div class="form">
+            <input type="text" id="userName" placeholder="Enter Name"><br>
+            <hr>
+            
+            <select id="workoutType"><br>
+                <br>
+                <option value="">Select Workout Type</option><br>
+                <option value="Running">Running</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Swimming">Swimming</option>
+            </select>
+           
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <input type="text" id="searchName" placeholder="Search by Name" oninput="filterWorkouts()"><hr>
+            <select id="filterType" onchange="filterWorkouts()">
+                <option value="">All Workouts</option><hr>
+                <option value="Running">Running</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Swimming">Swimming</option>
+            </select>
+        </div>
+
+        <!-- Workout Table -->
+        <table>
+           
+                <tr>
+                    <th>Name</th>
+                    <th> Workout Type</th>
+                    <th>Minutes</th>
+                </tr>
+           
+            <tbody id="workoutList"></tbody>
+        </table>
+        <div>
+            <input type="number" id="workoutMinutes" placeholder="Minutes"><br>
+            <button onclick="addWorkout()">Add Workout</button>
+        </div>
+
+        <!-- Workout Chart -->
+        <canvas id="workoutChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
